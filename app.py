@@ -1,15 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
-# # Replace with your OpenAI API key
-# client = OpenAI(api_key="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")
-import os
+ # Replace with your OpenAI API key
+ client = OpenAI(api_key="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")
 
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-print(openai_api_key)  # optional: just to check it loaded
 
 
 # Serve HTML page
@@ -37,3 +33,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
